@@ -4,7 +4,8 @@ import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
 import Button from '@material-ui/core/Button';
 import "./Quantity.scss";
-import Mesurement from './Mesurement';
+import Mesurement from './Units';
+import Input from './Input'; 
 
 
 export class QuantityMesurement extends React.Component {
@@ -16,7 +17,7 @@ export class QuantityMesurement extends React.Component {
                     <Button color="primary">History</Button>
                     </div>
                 </div>
-                <div className="appbar">
+                <div className="appbar"  >
                     <AppBar position="static">
                         <Toolbar>
                             <Typography variant="h6" align="center">
@@ -26,6 +27,7 @@ export class QuantityMesurement extends React.Component {
                     </AppBar>
                 </div>
                 <Mesurement />
+                <Input />
             </div>
         );
     }

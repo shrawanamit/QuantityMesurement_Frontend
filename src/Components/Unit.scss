@@ -1,0 +1,40 @@
+.image{
+   
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+    .length{
+   
+        top: 224px;
+        left: 385px;
+        width: 173px;
+        height: 137px;
+        background: #EDFDF9 0% 0% no-repeat padding-box;
+        box-shadow: 0px 3px 6px #00000029;
+        border: 1px solid #0EC098;
+        border-radius: 7px;
+        opacity: 1;
+    }
+   
+}
+.temperature{
+    top: 224px;
+    left: 588px;
+    width: 173px;
+    height: 137px;
+    background: #702a2a 0% 0% no-repeat padding-box;
+    border-radius: 7px;
+    opacity: 1;
+
+}
+.volume{
+    top: 224px;
+    left: 791px;
+    width: 173px;
+    height: 137px;
+    background: #c4aeae 0% 0% no-repeat padding-box;
+    border-radius: 7px;
+    opacity: 1;
+}
+
