@@ -1,21 +1,92 @@
+.body{
+    background-color:#F5F6FA;
+}
 .hedder{
-    margin:0;
-    height: 40px;
+    height: 61px;
     width: 100%;
     display: flex;
     flex-direction: row;
+    justify-content:center;
 }
-.history_btn{
+.hedder_body{
+    height: 61px;
+    width: 70%;
     display: flex;
-    margin: 0 0 0 auto;
+    flex-direction: row;
+    justify-content: space-between;
 }
+
+.history_btn{
+   padding-top: 16px;
+}
+.quanment{
+    padding-top: 16px;
+    font: Bold 21px/31px Poppins;
+    letter-spacing: 0px;
+    color: #000000;
+   
+}
+
 .title{
  height: 100%;
  margin-left: 10px;
  justify-content: center;
  margin-bottom: 15px;
 }
+
 .appbar{
-    text-align: center;
+    top: 61px;
+    left: 0px;
+    width: 1366px;
+    height: 75px;
+    background: #446DFF 0% 0% no-repeat padding-box;
+    opacity: 1;
+}
+.heading{
+    top: 84px;
+    left: 385px;
+    width: 460px;
+    height: 30px;
+    p{
+        text-align: center;
+        font: Regular 25px/30px Montserrat;
+        letter-spacing: 0px;
+        color: #FFFFFF;
+        text-transform: capitalize;
+        opacity: 1
+    }
+
+}
+.topbar-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
     align-items: center;
+    flex: 0 1 75px;
+    background-color: #FFFFFF;
+    width: 100%;
+    height: 50px;
+}
+
+.header-container{
+    max-width: 1600px;
+    height: 20vh;
+    margin: 0 auto 0 auto;
+    display: flex;
+    flex-flow: column;
+}
+
+.header-text{
+    background: #446DFF;
+    padding: 22px;
+    flex: 0 0 auto;
+    font: Regular 25px/30px Montserrat;
+    //font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    font-size: 3.5vh;
+    line-height: 30px;
+    letter-spacing: 0px;
+    color: #FFFFFF;
+    text-transform: capitalize;
+    opacity: 1;
 }

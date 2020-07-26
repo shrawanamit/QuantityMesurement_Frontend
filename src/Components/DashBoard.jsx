@@ -1,33 +1,41 @@
 import React from 'react';
-import AppBar from '@material-ui/core/AppBar';
-import Toolbar from '@material-ui/core/Toolbar';
-import Typography from '@material-ui/core/Typography';
 import Button from '@material-ui/core/Button';
 import "./Quantity.scss";
 import Mesurement from './Units';
-import Input from './Input'; 
+
+import { Link } from "react-router-dom";
+
 
 
 export class QuantityMesurement extends React.Component {
+    state={
+        unitType1: ['Length'],
+        unit1: ['Inch', 'Feet', 'Yard', 'Centimeter'],
+        unitType2: ['Temperature'],
+        unit2: ['Celsius', 'Fahrenheit','Kelvin'],
+        unitType3: ['Volume'],
+        unit3: ['Liter', 'Gallon', 'Millilitre'],
+        options:[],
+    };
     render() {
         return (
             <div className="body">
                 <div className="hedder">
-                    <div className="history_btn">
-                    <Button color="primary">History</Button>
+                    <div className="hedder_body">
+                        <div className="quanment">Quanment</div>
+                        <div className="history_btn" >
+                            <Link to ="/History">
+                                    <Button  onClick="/History">History</Button>
+                            </Link>
+                        </div>
                     </div>
                 </div>
-                <div className="appbar"  >
-                    <AppBar position="static">
-                        <Toolbar>
-                            <Typography variant="h6" align="center">
-                                Welcome To Quantity Mesurement
-                        </Typography>
-                        </Toolbar>
-                    </AppBar>
+                <div>
+                    <div class="header-container">
+                        <span class="header-text" align="center">Welcome To Quantity Measurement</span>
+                    </div>
+                    <Mesurement />
                 </div>
-                <Mesurement />
-                <Input />
             </div>
         );
     }
