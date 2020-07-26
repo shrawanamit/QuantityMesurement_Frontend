@@ -1,5 +1,8 @@
 import React from 'react';
 import "./input.scss";
+import options from '../Services/Service';
+let service = new options();
+
 export default class Input extends React.Component {
     constructor(props){
         super(props);
@@ -26,12 +29,21 @@ export default class Input extends React.Component {
     }
     optiontype(){
         
-        let unitVal = `${String(this.state.inputUnit)}To${String(this.state.outputUnit)}`;
+        // var unitVal = `${String(this.state.inputUnit)}To${String(this.state.outputUnit)}`;
+        var str2="To";
+        var unitVal=this.state.inputUnit.concat(str2, this.state.outputUnit);
         
-        let inputValue={
+        var inputValue={
             Value: this.state.inputValue,
             OptionType: unitVal
         }
+        service.optiontype(inputValue).then((data)=>{
+            if(this.state.numberValue !== 0 || this.state.numberValue !== null){
+                this.setState({ outputValue: data.data.data.result });
+            }
+            }).catch((err)=>{
+                console.log(err);
+            })
     }
 
 
