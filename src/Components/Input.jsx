@@ -8,35 +8,35 @@ export default class Input extends React.Component {
         super(props);
         this.state = {
             selectedUnitType: '',
-            inputValue: 0,
-            outputValue: 0
+            inputValue: 12,
+            outputValue: 1,
+            inputOption:'Inch',
+            outputOption:'Feet',
         };
     }
 
     onChangeFirst=(e)=>{  
         let value = e.target.value;
-        this.setState({ inputUnit: value}, ()=>this.optiontype());
+        this.setState({ inputOption: value},()=>{console.log(this.state.inputOption);});
         
     }
     onChangeSecond=(e)=>{
         let value = e.target.value;
-        this.setState({ outputUnit: value}, ()=>this.optiontype());
+        this.setState({ outputOption: value},()=>{console.log(this.state.inputOption);});
         
     }
 
     onChangeInput=(e)=>{
-        this.setState({  inputValue: e.target.value }, ()=>this.optiontype());
+        this.setState({  inputValue: e.target.value },()=>this.optiontype());
+        console.log(this.state.inputOption +'To'+ this.state.outputOption);
+            
     }
     optiontype(){
-        
-        // var unitVal = `${String(this.state.inputUnit)}To${String(this.state.outputUnit)}`;
-        var str2="To";
-        var unitVal=this.state.inputUnit.concat(str2, this.state.outputUnit);
-        
-        var inputValue={
-            Value: this.state.inputValue,
-            OptionType: unitVal
-        }
+           var unitVal = this.state.inputOption +'To'+ this.state.outputOption;
+            var inputValue={
+                Value: this.state.inputValue,
+                ConversionType: unitVal
+            }
         service.optiontype(inputValue).then((data)=>{
             if(this.state.numberValue !== 0 || this.state.numberValue !== null){
                 this.setState({ outputValue: data.data.data.result });
@@ -45,8 +45,7 @@ export default class Input extends React.Component {
                 console.log(err);
             })
     }
-
-
+    
     render() {
         let Quantity=this.props.Units;
         return (
@@ -54,7 +53,7 @@ export default class Input extends React.Component {
                 <div className="from">FROM<br />
                     <input className="input" type={"number"} value={this.state.inputValue} onChange={(event)=>this.onChangeInput(event)}></input>
                     <br />
-                    <select className="inputSelect" value={this.state.inputUnit} onChange={(element)=>this.onChangeFirst(element)}>
+                    <select className="inputSelect" value={this.state.inputOption} onChange={(element)=>this.onChangeFirst(element)}>
                     {Quantity.map((element, key) => {
                             return <option key={key}>{element}</option>;
                         })}
@@ -63,7 +62,7 @@ export default class Input extends React.Component {
                 <div className="to">TO <br />
                     <input className="output" type={"number"} value={this.state.outputValue} onChange={(event)=>this.onChangeInput(event)}></input>
                     <br />
-                    <select className="outputSelect" value={this.state.outputUnit} onChange={(element)=>this.onChangeSecond(element)}>
+                    <select className="outputSelect" value={this.state.outputOption} onChange={(element)=>this.onChangeSecond(element)}>
                     {Quantity.map((element, key) => {
                             return <option key={key}>{element}</option>;
                         })}
