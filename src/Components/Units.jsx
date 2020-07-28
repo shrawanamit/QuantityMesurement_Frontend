@@ -5,7 +5,7 @@ import activeHot from "../assets/image/activehot.svg";
 import activeBekar from "../assets/image/activeBekar.svg";
 import inActiveBekar from "../assets/image/inActiveBekar.svg";
 import inActiveHot from "../assets/image/inActiveHot.svg";
-import "./Unit.scss";
+import "../SCSS/Unit.scss";
 import Input from './Input';
 
 
@@ -37,7 +37,7 @@ export default class Mesurement extends React.Component {
         console.log(this.state.openImg2);
       }
 
-      
+
       lengthOption=()=>{
         this.setState({options:this.state.unit1});
        console.log(this.state.options);
@@ -100,6 +100,7 @@ export default class Mesurement extends React.Component {
                     }
                 </div>
 
+                 {/* passing value to input component  */}
                 <Input  Units={this.state.options}/>
             </div>
         );

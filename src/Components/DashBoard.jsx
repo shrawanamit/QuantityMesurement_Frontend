@@ -1,6 +1,6 @@
 import React from 'react';
 import Button from '@material-ui/core/Button';
-import "./Quantity.scss";
+import "../SCSS/Quantity.scss";
 import Mesurement from './Units';
 
 import { Link } from "react-router-dom";
