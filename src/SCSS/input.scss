@@ -74,3 +74,12 @@
     text-transform: uppercase;
     opacity: 0.62;
 }
+@media only screen and (max-width: 360px) {
+    .header{
+        margin-left: 80px;
+        font-size: 15px;
+        
+    }
+   
+}
+

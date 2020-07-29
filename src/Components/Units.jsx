@@ -16,7 +16,7 @@ export default class Mesurement extends React.Component {
         this.state = {
             unit1: ['Inch', 'Feet', 'Yard', 'Centimeter'],
             unit2: ['Celsius', 'Fahrenheit','Kelvin'],
-            unit3: ['Liter', 'Gallon', 'Millilitre'],
+            unit3: ['Litre', 'Gallon', 'Millilitre'],
             options:[],
             openImg: false,
             openImg1: false,

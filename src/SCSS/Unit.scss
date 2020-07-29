@@ -211,26 +211,12 @@
     z-index:-1;
 }
 
-@media only screen and (max-width: 1024px) {
-    .quanment{
-        color:red;
+@media only screen and (max-width: 360px) {
+    .header{
+        margin-left: 80px;
+        font-size: 15px;
+        
     }
    
 }
 
-@media screen and (device-width: 360px) {
-.length{
-    width: 400px;
-    height:137px;
-}
-.header-container{
-        Text-align:90px;
-        width: 40px;
-    }
-    .main{
-        width: 100%;
-    }
-    .home{
-        width: 50%;
-    }
-}
