@@ -101,7 +101,7 @@ export default class History extends React.Component {
                                             <TableCell align="right">{row.result}</TableCell>
                                             <TableCell align="right">{row.dateOFCreation}</TableCell>
                                             <TableCell align="right">
-                                                <Button variant="contained" onClick={() => this.delete(row.id)} color="secondary" startIcon={<DeleteIcon />}>
+                                                <Button variant="contained" onClick={() => this.delete(row.id)} color="primary" startIcon={<DeleteIcon />}>
                                                     Delete
                                          </Button>
                                             </TableCell>

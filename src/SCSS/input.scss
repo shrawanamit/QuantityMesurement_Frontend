@@ -2,6 +2,7 @@
     display: flex;
     justify-content: center;
     margin-top: 30px;
+    flex-wrap: wrap;
 }
 .input{
     width: 280px;
@@ -29,6 +30,7 @@
     color: #000000;
     opacity: 1;
     margin-right: 30px;
+    text-indent: 25px;
 
 }
 .output{
@@ -79,6 +81,13 @@
         margin-left: 80px;
         font-size: 15px;
         
+    }
+    .from{
+        margin-left: 30px;
+    }
+    .to{
+        margin-left: 0px;
+
     }
    
 }

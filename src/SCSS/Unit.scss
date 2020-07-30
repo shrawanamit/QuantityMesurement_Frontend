@@ -30,7 +30,7 @@
     align-items:center;
     Justify-content: center;
     font-family: 'Montserrat', sans-serif;
-    color: grey;
+    color: #0EC098;
     font-weight: bold;
     font-size: 15px;
     line-height: 19px;
@@ -39,10 +39,12 @@
     width: 173px;
     height:137px;
     margin:2px;
-    background-color: #FFFFFF;
+    background-color:#EDFDF9;
     border-radius: 7px;
     opacity: 1;
-    border-color:transparent;
+    border-color:#0EC098;
+    border-width:2px;
+    border-style:solid;
     
 }
 .image1{
@@ -126,7 +128,7 @@
     background-color:#FFEEF0;
     color:#FD5160;
 }
-.volume:hover,.volume:active{
+.volume:hover{
     border-color:#7224FF;
     border-width:2px;
     border-style:solid;
@@ -140,7 +142,7 @@
     Justify-content: center;
     font-family: 'Montserrat', sans-serif;
     font-weight: bold;
-    color: grey;
+    color: #FD5160;
     font-size: 15px;
     line-height: 19px;
     letter-spacing: 0px;
@@ -149,9 +151,12 @@
     height:137px;
     border-color:transparent;
     margin:2px;
-    background-color: #FFFFFF;
+    background-color: #FFEEF0;
     border-radius: 7px;
     opacity: 1;
+    border-color:#FD5160;
+    border-width:2px;
+    border-style:solid;
 }
 .volume{
     display:flex;
@@ -160,7 +165,7 @@
     Justify-content: center;
     font-family: 'Montserrat', sans-serif;
     font-weight: bold;
-    color: grey;
+    color: #7224FF;
     font-size: 15px;
     line-height: 19px;
     letter-spacing: 0px;
@@ -169,9 +174,12 @@
     height:137px;
     margin:2px;
     border-color:transparent;
-    background-color: #FFFFFF;
+    background-color:#E7DCFE;
     border-radius: 7px;
     opacity: 1;
+    border-color:#7224FF;
+    border-width:2px;
+    border-style:solid;
 }
 .image3{
     display:flex;

@@ -21,6 +21,7 @@ export default class Mesurement extends React.Component {
             openImg: false,
             openImg1: false,
             openImg2: false,
+            selected:'Length',
         };
     }
 
@@ -39,16 +40,17 @@ export default class Mesurement extends React.Component {
 
 
       lengthOption=()=>{
-        this.setState({options:this.state.unit1});
+        this.setState({options:this.state.unit1,selected:'Length'});
        console.log(this.state.options);
+       //this.handleColorToggle();
      }
  
      temperatureOption=()=>{
-       this.setState({options:this.state.unit2});
+       this.setState({options:this.state.unit2,selected:'Temperature'});
        console.log("temperature array",this.state.options);
      }
      volumeOption=()=>{
-       this.setState({options:this.state.unit3});
+       this.setState({options:this.state.unit3,selected:'Volume'});
        console.log(this.state.options);
      }
 
@@ -63,8 +65,8 @@ export default class Mesurement extends React.Component {
                 <div class="home">
 
                     {
-                        this.state.openImg ?
-                            <div class="length" onClick={() => this.lengthOption()}
+                        this.state.openImg || this.state.selected == 'Length' ?
+                            <div class="length" onClick={() => this.lengthOption() }
                                 onMouseOver={this.handleColorToggle}
                                 onMouseLeave={this.handleColorToggle}
                             ><img src={activeLength} class="lengthimage" alt="Length" />Length</div> :
@@ -76,7 +78,7 @@ export default class Mesurement extends React.Component {
                     }
 
                     {
-                        this.state.openImg1 ?
+                        this.state.openImg1 || this.state.selected == 'Temperature' ?
                             <div class="temperature" onClick={() => this.temperatureOption()}
                                 onMouseOver={this.handleColorToggle1}
                                 onMouseLeave={this.handleColorToggle1}
@@ -88,7 +90,7 @@ export default class Mesurement extends React.Component {
                     }
 
                     {
-                        this.state.openImg2 ?
+                        this.state.openImg2 || this.state.selected == 'Volume'?
                             <div class="volume" onClick={() => this.volumeOption()}
                                 onMouseOver={this.handleColorToggle2}
                                 onMouseLeave={this.handleColorToggle2}

@@ -8,15 +8,6 @@ import { Link } from "react-router-dom";
 
 
 export class QuantityMesurement extends React.Component {
-    state={
-        unitType1: ['Length'],
-        unit1: ['Inch', 'Feet', 'Yard', 'Centimeter'],
-        unitType2: ['Temperature'],
-        unit2: ['Celsius', 'Fahrenheit','Kelvin'],
-        unitType3: ['Volume'],
-        unit3: ['Liter', 'Gallon', 'Millilitre'],
-        options:[],
-    };
     render() {
         return (
             <div className="body">

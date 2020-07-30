@@ -4,7 +4,7 @@ import options from '../Services/Service';
 let service = new options();
 
 export default class Input extends React.Component {
-    
+
     // passing value from parent to child
     constructor(props) {
         super(props);
@@ -40,7 +40,7 @@ export default class Input extends React.Component {
         console.log(this.state.inputOption + 'To' + this.state.outputOption);
     }
     optiontype() {
-        
+
         //concatinate the input and output option
         var unitVal = this.state.inputOption + 'To' + this.state.outputOption;
 
@@ -68,7 +68,7 @@ export default class Input extends React.Component {
                 <div className="from">FROM<br />
                     <input className="input" type={"number"} value={this.state.inputValue} onChange={(event) => this.onChangeInput(event)}></input>
                     <br />
-                    
+
                     <select className="inputSelect" value={this.state.inputOption} onChange={(element) => this.onChangeFirst(element)}>
                         {/* maping the unit to option  */}
                         {Quantity.map((element, key) => {
@@ -80,7 +80,7 @@ export default class Input extends React.Component {
                     <input className="output" type={"number"} value={this.state.outputValue} onChange={(event) => this.onChangeInput(event)}></input>
                     <br />
                     <select className="outputSelect" value={this.state.outputOption} onChange={(element) => this.onChangeSecond(element)}>
-                       
+
                         {/* maping the unit to option  */}
                         {Quantity.map((element, key) => {
                             return <option key={key}>{element}</option>;
